@@ -24,3 +24,8 @@ while opt != "0":
       theme = "Foods"
       word = hangfunc.get_random_word(themes, theme)
       hangfunc.game(word)
+
+    if opt == "4":
+      theme = "Movies"
+      word = hangfunc.get_random_word(themes, theme)
+      hangfunc.game(word)
