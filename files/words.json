@@ -1,0 +1,52 @@
+{
+  "themes": {
+    "Movies": [
+      "Inception",
+      "Titanic",
+      "Avatar",
+      "Gladiator",
+      "Interstellar",
+      "Joker",
+      "Frozen",
+      "Parasite",
+      "Godfather",
+      "Matrix"
+    ],
+    "Foods": [
+      "Pizza",
+      "Sushi",
+      "Pasta",
+      "Burger",
+      "Tacos",
+      "Salad",
+      "Steak",
+      "Curry",
+      "Paella",
+      "Chocolate"
+    ],
+    "Countries": [
+      "Brazil",
+      "Canada",
+      "Germany",
+      "Australia",
+      "Japan",
+      "France",
+      "Italy",
+      "Mexico",
+      "China",
+      "India"
+    ],
+    "Animals": [
+      "Elephant",
+      "Giraffe",
+      "Kangaroo",
+      "Penguin",
+      "Dolphin",
+      "Tiger",
+      "Zebra",
+      "Panda",
+      "Cheetah",
+      "Ostrich"
+    ]
+  }
+}
