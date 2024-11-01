@@ -1,5 +1,8 @@
+# Functions that make up the hangman game
+
 import random
 import os
+from modules import screens
 
 def get_random_word(dict, theme):
     random_word = random.choice(dict["themes"][theme])
@@ -9,8 +12,12 @@ def game(word):
     found_letters = ["_" for _ in word]
     wrong_letters = []
     attemps = 6
+    error = 0
     while attemps > 0:
         os.system("clear || cls")
+        print()
+        screens.print_hangman(error)
+        print()
         print(" ".join(found_letters))
         print()
         print("Wrong letters: ", " ".join(wrong_letters))
@@ -25,6 +32,7 @@ def game(word):
                 if attemp == letter:
                     found_letters[index]= letter
                 index += 1
+
             if "_" not in found_letters:
                 os.system("clear || cls")
                 print()
@@ -36,9 +44,12 @@ def game(word):
                 break
         else:
             attemps -= 1
+            error += 1
             wrong_letters.append(attemp)
             if attemps == 0:
                 os.system("clear || cls")
+                print()
+                screens.print_hangman(error)
                 print()
                 print("The word was:", word)
                 print()
