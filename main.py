@@ -4,7 +4,7 @@ from modules import screens, hangfunc
 
 #╔═══════-PYHANGMAN-═══════╗
 #║                         ║
-#║     PyHangman v1.0      ║
+#║     PyHangman v2.0      ║
 #║                         ║
 #║  A classic hangman game ║
 #║  developed in Python,   ║
@@ -30,19 +30,19 @@ while opt != "0":
     if opt == "1":
       theme = "Animals" # Define the theme corresponding to the option
       word = hangfunc.get_random_word(themes, theme) # Store the result of the word draw according to the theme
-      hangfunc.game(word) # Run the game based on the selected word
+      hangfunc.game(theme, word) # Run the game based on the selected word
 
     if opt == "2":
       theme = "Countries"
       word = hangfunc.get_random_word(themes, theme)
-      hangfunc.game(word)
+      hangfunc.game(theme, word)
 
     if opt == "3":
       theme = "Foods"
       word = hangfunc.get_random_word(themes, theme)
-      hangfunc.game(word)
-
+      hangfunc.game(theme, word)
+    
     if opt == "4":
       theme = "Movies"
       word = hangfunc.get_random_word(themes, theme)
-      hangfunc.game(word)
+      hangfunc.game(theme, word)
