@@ -4,7 +4,7 @@ from modules import screens, hangfunc
 
 #╔═══════-PYHANGMAN-═══════╗
 #║                         ║
-#║     PyHangman v1.0      ║
+#║     PyHangman v1.1      ║
 #║                         ║
 #║  A classic hangman game ║
 #║  developed in Python,   ║

@@ -16,3 +16,60 @@ def menu_select_theme():
   print("╚═════════════════════════╝")
   opt = input("    Choose an option: ")
   return opt
+
+def print_hangman(error):
+  if error == 0:
+    print("  +---+  ")
+    print("      |  ")
+    print("      |  ")
+    print("      |  ")
+    print("      |  ")
+    print("     === ")
+
+  elif error == 1:
+    print("  +---+  ")
+    print("  O   |  ")
+    print("      |  ")
+    print("      |  ")
+    print("      |  ")
+    print("     === ")
+
+  elif error == 2:
+    print("  +---+  ")
+    print("  O   |  ")
+    print("  |   |  ")
+    print("      |  ")
+    print("      |  ")
+    print("     === ")
+
+  elif error == 3:
+    print("  +---+  ")
+    print("  O   |  ")
+    print(" /|   |  ")
+    print("      |  ")
+    print("      |  ")
+    print("     === ")
+
+  elif error == 4:
+    print("  +---+  ")
+    print("  O   |  ")
+    print(" /|\\  |  ")
+    print("      |  ")
+    print("      |  ")
+    print("     === ")
+
+  elif error == 5:
+    print("  +---+  ")
+    print("  O   |  ")
+    print(" /|\\  |  ")
+    print(" /    |  ")
+    print("      |  ")
+    print("     === ")
+
+  elif error == 6:
+    print("  +---+  ")
+    print("  O   |  ")
+    print(" /|\\  |  ")
+    print(" / \\  |  ")
+    print("      |  ")
+    print("     === ")
