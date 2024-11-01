@@ -73,3 +73,24 @@ def print_hangman(error):
     print(" / \\  |  ")
     print("      |  ")
     print("     === ")
+
+def print_its_a_theme(theme):
+  if theme == "Animals":
+    print("╔═══════-PYHANGMAN-═══════╗")
+    print("║     IT IS AN ANIMAL     ║")
+    print("╚═════════════════════════╝")
+
+  elif theme == "Countries":
+    print("╔═══════-PYHANGMAN-═══════╗")
+    print("║     IT IS A COUNTRY     ║")
+    print("╚═════════════════════════╝")
+
+  elif theme == "Foods":
+    print("╔═══════-PYHANGMAN-═══════╗")
+    print("║       IT'S A FOOD       ║")
+    print("╚═════════════════════════╝")
+
+  elif theme == "Movies":
+    print("╔═══════-PYHANGMAN-═══════╗")
+    print("║      IT IS A MOVIE      ║")
+    print("╚═════════════════════════╝")
