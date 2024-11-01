@@ -9,7 +9,7 @@ def get_random_word(dict, theme):
     return random_word.upper()
 
 def game(theme, word):
-    found_letters = ["_" for _ in word]
+    found_letters = ["_" for _ in word] # Transform each letter of the word into "_"
     wrong_letters = []
     attemps = 6
     error = 0
@@ -20,7 +20,7 @@ def game(theme, word):
         print()
         screens.print_hangman(error)
         print()
-        print(" ".join(found_letters))
+        print(" ".join(found_letters)) # Display each letter separated by space
         print()
         print("Wrong letters: ", " ".join(wrong_letters))
         print()
@@ -30,10 +30,10 @@ def game(theme, word):
 
         if attemp in word:
             index = 0
-            for letter in word:
-                if attemp == letter:
-                    found_letters[index]= letter
-                index += 1
+            for letter in word:# Loop through all letters
+                if attemp == letter: # If the guess (a letter) matches any letter in the word
+                    found_letters[index]= letter # Replace the "_" in the word with the corresponding letter
+                index += 1 # Prevent the loop from executing at the same index in the next iteration
 
             if "_" not in found_letters:
                 os.system("clear || cls")
