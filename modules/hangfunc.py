@@ -8,13 +8,15 @@ def get_random_word(dict, theme):
     random_word = random.choice(dict["themes"][theme])
     return random_word.upper()
 
-def game(word):
+def game(theme, word):
     found_letters = ["_" for _ in word]
     wrong_letters = []
     attemps = 6
     error = 0
     while attemps > 0:
         os.system("clear || cls")
+        print()
+        screens.print_its_a_theme(theme)
         print()
         screens.print_hangman(error)
         print()
