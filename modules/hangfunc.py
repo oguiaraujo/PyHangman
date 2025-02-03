@@ -26,8 +26,13 @@ def game(theme, word, score):
         print()
         print("Remaining chances:", attemps)
         print()
-        attemp = input("Get the letter: ").upper()
-
+        while True:
+            attemp = input("Get the letter: ").upper()
+            if attemp in wrong_letters:
+                print("You already tried the letter %s before." % attemp)
+                continue
+            break
+        
         if attemp in word:
             index = 0
             for letter in word:# Loop through all letters
