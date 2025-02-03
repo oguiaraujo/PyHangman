@@ -4,7 +4,7 @@ from modules import screens, hangfunc
 
 #╔═══════-PYHANGMAN-═══════╗
 #║                         ║
-#║     PyHangman v2.3      ║
+#║     PyHangman v3.0      ║
 #║                         ║
 #║  A classic hangman game ║
 #║  developed in Python,   ║
@@ -19,7 +19,7 @@ from modules import screens, hangfunc
 #║                         ║
 #╚═════════════════════════╝
 
-score = 0
+score = 0 # Define the score as a global variable in the code.
 opt = ""
 while opt != "0":
   opt = screens.menu_select_theme()

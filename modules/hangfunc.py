@@ -28,13 +28,13 @@ def game(theme, word, score):
         print()
         while True:
             attemp = input("Get the letter: ").upper()
-            if len(attemp) == 1:
-                if attemp in wrong_letters:
+            if len(attemp) == 1: # Ensure that the user inputs only one character.
+                if attemp in wrong_letters: # Ensure that a repeated letter does not count as an attempt.
                     print("You already tried the letter %s before." % attemp)
-                    continue
+                    continue # Restart the loop without breaking out.
             else:
                 print("Type only one letter.")
-                continue
+                continue # Restart the loop without breaking out.
             break
 
         if attemp in word:
