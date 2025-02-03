@@ -8,7 +8,7 @@ def get_random_word(dict, theme):
     random_word = random.choice(dict["themes"][theme])
     return random_word.upper()
 
-def game(theme, word):
+def game(theme, word, score):
     found_letters = ["_" for _ in word] # Transform each letter of the word into "_"
     wrong_letters = []
     attemps = 6
@@ -26,7 +26,16 @@ def game(theme, word):
         print()
         print("Remaining chances:", attemps)
         print()
-        attemp = input("Get the letter: ").upper()
+        while True:
+            attemp = input("Get the letter: ").upper()
+            if len(attemp) == 1: # Ensure that the user inputs only one character.
+                if attemp in wrong_letters: # Ensure that a repeated letter does not count as an attempt.
+                    print("You already tried the letter %s before." % attemp)
+                    continue # Restart the loop without breaking out.
+            else:
+                print("Type only one letter.")
+                continue # Restart the loop without breaking out.
+            break
 
         if attemp in word:
             index = 0
@@ -41,9 +50,11 @@ def game(theme, word):
                 print(" ".join(found_letters))
                 print()
                 print("Congratulations! You completed the word!")
+                score += 1
+                print("Your score is", score)
                 print()
                 input("<ENTER> to back")
-                break
+                return score
         else:
             attemps -= 1
             error += 1
@@ -56,5 +67,8 @@ def game(theme, word):
                 print("The word was:", word)
                 print()
                 print("Too bad, you were 'hanged'! Good luck next time!")
+                score -= 1
+                print("Your score is", score)
                 print()
                 input("<ENTER> to back")
+                return score
