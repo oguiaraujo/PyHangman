@@ -8,7 +8,7 @@ def get_random_word(dict, theme):
     random_word = random.choice(dict["themes"][theme])
     return random_word.upper()
 
-def game(theme, word):
+def game(theme, word, score):
     found_letters = ["_" for _ in word] # Transform each letter of the word into "_"
     wrong_letters = []
     attemps = 6
@@ -41,9 +41,11 @@ def game(theme, word):
                 print(" ".join(found_letters))
                 print()
                 print("Congratulations! You completed the word!")
+                score += 1
+                print("Your score is", score)
                 print()
                 input("<ENTER> to back")
-                break
+                return score
         else:
             attemps -= 1
             error += 1
@@ -56,5 +58,8 @@ def game(theme, word):
                 print("The word was:", word)
                 print()
                 print("Too bad, you were 'hanged'! Good luck next time!")
+                score -= 1
+                print("Your score is", score)
                 print()
                 input("<ENTER> to back")
+                return score
