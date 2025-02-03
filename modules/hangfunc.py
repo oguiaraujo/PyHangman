@@ -28,11 +28,15 @@ def game(theme, word, score):
         print()
         while True:
             attemp = input("Get the letter: ").upper()
-            if attemp in wrong_letters:
-                print("You already tried the letter %s before." % attemp)
+            if len(attemp) == 1:
+                if attemp in wrong_letters:
+                    print("You already tried the letter %s before." % attemp)
+                    continue
+            else:
+                print("Type only one letter.")
                 continue
             break
-        
+
         if attemp in word:
             index = 0
             for letter in word:# Loop through all letters
